@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Spaceship Titanic - Jonathan Duckes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/jonathanduc" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Project Content -->
+                <section>
+                    <header class="main">
+                        <h1>Spaceship Titanic</h1>
+                    </header>
+                    <p>
+                        Projet dans le cadre d'une compétition Kaggle "Spaceship Titanic". Le but du projet était de prédire quels passagers ont été transportés dans une dimension alternative suite à une collision du vaisseau avec une anomalie spatio-temporelle. Les étapes du projet incluent l'analyse des données, la modélisation, l'évaluation des modèles et la soumission sur Kaggle.
+                    </p>
+                    <h2>Méthodologie</h2>
+                    <p>
+                        <strong>Exploration des données :</strong> Nettoyage des données et visualisation des distributions et corrélations.
+                        <br>
+                        <strong>Préparation des données :</strong> Normalisation et transformation des données pour le modèle.
+                        <br>
+                        <strong>Modélisation :</strong> Utilisation de divers algorithmes de classification pour prédire la survie des passagers.
+                        <br>
+                        <strong>Évaluation :</strong> Comparaison des performances des modèles à l'aide de l'accuracy et de la courbe ROC.
+                    </p>
+                    <h2>Technologies Utilisées</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>Pandas</li>
+                        <li>Scikit-learn</li>
+                        <li>Matplotlib</li>
+                        <li>Seaborn</li>
+                    </ul>
+                    <ul class="actions">
+                        <li><a href="https://github.com/jonathanduc/SpaceshipTitanic" class="button">Voir sur GitHub</a></li>
+                        <li><a href="mnt/data/Memoire_final_M1_Jonathan_Duckes.pdf" class="button">Voir le mémoire</a></li>
+                        <li><a href="mnt/data/Competiton_Kaggle_Spaceship_Titanic.pdf" class="button">Voir la présentation</a></li>
+                    </ul>
+                </section>
+
+                <!-- Gallery Section -->
+                <section class="gallery">
+                    <header class="main">
+                        <h2>Galerie</h2>
+                    </header>
+                    <div class="box alt">
+                        <div class="row gtr-50 gtr-uniform">
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/spaceship_titanic/analysis.png', 'Analyse des données')">
+                                    <img src="images/spaceship_titanic/analysis.png" alt="Analyse des données" />
+                                    <h4>Analyse des données</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/spaceship_titanic/correlation_matrix.png', 'Matrice de corrélation')">
+                                    <img src="images/spaceship_titanic/correlation_matrix.png" alt="Matrice de corrélation" />
+                                    <h4>Matrice de corrélation</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/spaceship_titanic/roc_curve.png', 'Courbe ROC du modèle SVM')">
+                                    <img src="images/spaceship_titanic/roc_curve.png" alt="Courbe ROC du modèle SVM" />
+                                    <h4>Courbe ROC des modèles Random Forrest, SVM et Linear Regression</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div class="caption" id="caption"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/modal.js"></script>
+</body>
+</html>

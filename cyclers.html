@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Challenge Mobilité - Jonathan Duckes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/jonathanduc" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Project Content -->
+                <section>
+                    <header class="main">
+                        <h1>Challenge Mobilité</h1>
+                    </header>
+                    <p>
+                        Projet dans le cadre d’un projet Erasmus + 3CS “Cycling, Campus & City” en partenariat avec la start-up Muv. Objectifs côté MIASHS : traitement et analyse de données de l'application Muv, développement d'une application pour visualiser les données. Utilisation de données brutes (~500 000 lignes), analyses descriptives, exploratoires et clustering avec K-means.
+                    </p>
+                    <h2>Méthodologie</h2>
+                    <p>
+                        <strong>Conception de l’application Cyclers :</strong> 
+                        <br>
+                        <strong>Récolte de données :</strong> Utilisation de l'application MUV pour collecter des données brutes (~500 000 lignes).
+                        <br>
+                        <strong>Analyses descriptives et exploratoires :</strong> Études préliminaires pour identifier les données aberrantes et comprendre les tendances générales.
+                        <br>
+                        <strong>Cartographie :</strong> Visualisation des trajets parcourus par les utilisateurs sur une carte interactive.
+                        <br>
+                        <strong>Clustering :</strong> Utilisation de l’algorithme K-means pour identifier des groupes de profils utilisateurs.
+                        <br>
+                        <strong>Communication :</strong> Promotion du challenge pour encourager les utilisateurs à participer et à utiliser l'application.
+                    </p>
+                    <h2>Technologies Utilisées</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>R</li>
+                        <li>Leaflet</li>
+                        <li>Shiny</li>
+                        <li>K-means</li>
+                    </ul>
+                    <ul class="actions">
+                        <li><a href="https://github.com/houriasayah/Cyclers" class="button">Voir sur GitHub</a></li>
+                        <li><a href="mnt/data/CHALLENGE_MOBILITE_V2.pdf" class="button">Voir le rapport</a></li>
+                    </ul>
+                </section>
+
+                <!-- Gallery Section -->
+                <section class="gallery">
+                    <header class="main">
+                        <h2>Galerie</h2>
+                    </header>
+                    <div class="box alt">
+                        <div class="row gtr-50 gtr-uniform">
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/cyclers/desc.png', 'Analyses descriptives')">
+                                    <img src="images/cyclers/desc.png" alt="Analyses descriptives" />
+                                    <h4>Analyses descriptives</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/cyclers/expl.png', 'Analyses exploratoires')">
+                                    <img src="images/cyclers/expl.png" alt="Analyses exploratoires" />
+                                    <h4>Analyses exploratoires</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/cyclers/carte.png', 'Carte des chemins parcourus')">
+                                    <img src="images/cyclers/carte.png" alt="Carte des chemins parcourus" />
+                                    <h4>Carte des chemins parcourus</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/cyclers/cluster.png', 'Clustering avec K-Means')">
+                                    <img src="images/cyclers/cluster.png" alt="Clustering avec K-Means" />
+                                    <h4>Clustering avec K-Means</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div class="caption" id="caption"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/modal.js"></script>
+</body>
+</html>

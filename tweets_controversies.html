@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Visualisations de Tweets Controversés - Jonathan Duckes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/jonathanduc" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Project Content -->
+                <section>
+                    <header class="main">
+                        <h1>Visualisations de Tweets Controversés</h1>
+                    </header>
+                    <p>
+                        Projet réalisé dans le cadre du TER (Travail d'Étude et de Recherche) visant à analyser les tweets controversés autour des interventions non médicamenteuses pour le traitement du cancer. Ce projet inclut l'analyse des sentiments, des émotions, la détection de communautés, le Topic Modelling et le calcul d'un indice de controverse.
+                    </p>
+                    <h2>Méthodologie</h2>
+                    <p>
+                        <strong>Collecte de données :</strong> Récupération des tweets à l'aide de l'API Twitter.
+                        <br>
+                        <strong>Analyse exploratoire :</strong> Visualisation des tendances et des sentiments dans les tweets.
+                        <br>
+                        <strong>Modélisation :</strong> Détection des tweets controversés en utilisant des techniques de traitement du langage naturel (NLP).
+                        <br>
+                        <strong>Déploiement :</strong> Création d'une application web pour visualiser les analyses de tweets en temps réel.
+                    </p>
+                    <h2>Technologies Utilisées</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>D3.js</li>
+                        <li>MongoDB</li>
+                        <li>Matplotlib</li>
+                    </ul>
+                    <ul class="actions">
+                        <li><a href="https://github.com/alyasltd/TER-2023-2024-Visualisations_de_tweets_controverses" class="button">Voir sur GitHub</a></li>
+                        <li><a href="mnt/data/Tweets_controverses_TER_-_Rapport_final.pdf" class="button">Voir le rapport</a></li>
+                    </ul>
+                </section>
+
+               <!-- Gallery Section -->
+                <section class="gallery">
+                    <header class="main">
+                        <h2>Galerie</h2>
+                    </header>
+                    <div class="box alt">
+                        <div class="row gtr-50 gtr-uniform">
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/tweets_controverses/sentiments.png', 'Analyse des sentiments')">
+                                    <img src="images/tweets_controverses/sentiments.png" alt="Analyse des sentiments" />
+                                    <h4>Analyse des sentiments</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/tweets_controverses/emotions.png', 'Analyse des émotions')">
+                                    <img src="images/tweets_controverses/emotions.png" alt="Analyse des émotions" />
+                                    <h4>Analyse des émotions</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/tweets_controverses/communities.png', 'Détection de communautés')">
+                                    <img src="images/tweets_controverses/communities.png" alt="Détection de communautés" />
+                                    <h4>Détection de communautés</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/tweets_controverses/lda.png', 'Topic Modelling avec LDA')">
+                                    <img src="images/tweets_controverses/lda.png" alt="Topic Modelling avec LDA" />
+                                    <h4>Topic Modelling avec LDA</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/tweets_controverses/controversy_index.png', 'Indice de controverse')">
+                                    <img src="images/tweets_controverses/controversy_index.png" alt="Indice de controverse" />
+                                    <h4>Indice de controverse</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div class="caption" id="caption"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/modal.js"></script>
+</body>
+</html>

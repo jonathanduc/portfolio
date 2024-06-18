@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Reconnaissance d’objet géométrique - Jonathan Duckes</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
+                    <ul class="icons">
+                        <li><a href="https://github.com/jonathanduc" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </header>
+
+                <!-- Project Content -->
+                <section>
+                    <header class="main">
+                        <h1>Reconnaissance d’objet géométrique</h1>
+                    </header>
+                    <p>
+                        Projet réalisé dans le cadre de ma fin de Licence MIASHS, visant à prédire automatiquement la position et la forme de différentes figures géométriques élémentaires. Le projet inclut la création d'une base d'apprentissage, l'annotation des images avec LabelImg, l'utilisation du modèle YOLOv5 pour la détection et l'évaluation des performances du modèle.
+                    </p>
+                    <h2>Méthodologie</h2>
+                    <p>
+                        <strong>Création de la base d’apprentissage :</strong> Annotation de 150 à 200 images de schémas géométriques avec LabelImg.
+                        <br>
+                        <strong>Entraînement du modèle :</strong> Utilisation de YOLOv5 sur Google Colab pour entraîner le modèle de détection d’objets.
+                        <br>
+                        <strong>Évaluation et amélioration :</strong> Ajustement des paramètres du modèle et utilisation de techniques d’augmentation de données pour améliorer les performances.
+                    </p>
+                    <h2>Technologies Utilisées</h2>
+                    <ul>
+                        <li>Python</li>
+                        <li>YOLOv5</li>
+                        <li>LabelImg</li>
+                        <li>Google Colab</li>
+                        <li>Roboflow</li>
+                    </ul>
+                    <ul class="actions">
+                        <li><a href="https://github.com/jonathanduc/GeometryObjectRecognition" class="button">Voir sur GitHub</a></li>
+                        <li><a href="mnt/data/Rapport (1).pdf" class="button">Voir le rapport</a></li>
+                    </ul>
+                </section>
+
+                <!-- Gallery Section -->
+                <section>
+                    <header class="main">
+                        <h2>Galerie</h2>
+                    </header>
+                    <div class="box alt">
+                        <div class="row gtr-50 gtr-uniform">
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/geometry_recognition/labelimg.png', 'Utilisation de LabelImg')">
+                                    <img src="images/geometry_recognition/labelimg.png" alt="Utilisation de LabelImg" />
+                                    <h4>Utilisation de LabelImg</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/geometry_recognition/detection_results.png', 'Résultats de détection des objets')">
+                                    <img src="images/geometry_recognition/detection_results.png" alt="Résultats de détection des objets" />
+                                    <h4>Résultats de détection des objets</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="image fit" onclick="openModal('images/geometry_recognition/performance_graph.png', 'Graphiques de performance du modèle')">
+                                    <img src="images/geometry_recognition/performance_graph.png" alt="Graphiques de performance du modèle" />
+                                    <h4>Graphique de performance du modèle</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div class="caption" id="caption"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/modal.js"></script>
+</body>
+</html>
