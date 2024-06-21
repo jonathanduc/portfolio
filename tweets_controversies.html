@@ -28,23 +28,80 @@
                         Projet réalisé dans le cadre du TER (Travail d'Étude et de Recherche) visant à analyser les tweets controversés autour des interventions non médicamenteuses pour le traitement du cancer. Ce projet inclut l'analyse des sentiments, des émotions, la détection de communautés, le Topic Modelling et le calcul d'un indice de controverse.
                     </p>
                     <h2>Méthodologie</h2>
-                    <p>
-                        <strong>Collecte de données :</strong> Récupération des tweets à l'aide de l'API Twitter.
-                        <br>
-                        <strong>Analyse exploratoire :</strong> Visualisation des tendances et des sentiments dans les tweets.
-                        <br>
-                        <strong>Modélisation :</strong> Détection des tweets controversés en utilisant des techniques de traitement du langage naturel (NLP).
-                        <br>
-                        <strong>Déploiement :</strong> Création d'une application web pour visualiser les analyses de tweets en temps réel.
-                    </p>
+                    <ul>
+                        <li><strong>Collecte de données :</strong> Nous avons collecté des tweets liés aux controverses médicales provenant de diverses sources, en nous concentrant sur des sujets tels que le cancer et le cannabis.</li>
+                        <li><strong>Prétraitement :</strong> Les tweets collectés ont été nettoyés en supprimant les mots vides, en effectuant une lemmatisation et en convertissant le texte en minuscules.</li>
+                        <li><strong>Analyse descriptive :</strong> Nous avons effectué une analyse statistique descriptive pour comprendre la distribution et la fréquence des tweets.</li>
+                        <li><strong>Classification des opinions :</strong> Nous avons étiqueté les tweets en trois catégories : POUR, CONTRE et NEUTRE. Nous avons utilisé une répartition 80/20 pour l'entraînement et le test de notre modèle de classification, et affiné un modèle BERT pré-entraîné pour cette tâche.</li>
+                        <li><strong>Analyse des sentiments :</strong> Nous avons analysé les sentiments et les émotions exprimés dans les tweets en utilisant t-SNE pour la visualisation de l'espace des caractéristiques et le scoring de la polarité.</li>
+                        <li><strong>Modélisation des sujets :</strong> Nous avons appliqué LDA (Latent Dirichlet Allocation) pour extraire les principaux sujets des tweets, en identifiant des clusters significatifs et des thèmes principaux.</li>
+                        <li><strong>Détection de communautés :</strong> En utilisant l'algorithme de clustering K-Means et la vectorisation TF-IDF, nous avons identifié des schémas et des relations entre les hashtags pour comprendre les discussions autour de thèmes spécifiques.</li>
+                        <li><strong>Visualisation :</strong> Nous avons créé des visualisations interactives à l'aide de bibliothèques Python telles que Matplotlib et Plotly pour présenter nos résultats de manière efficace.</li>
+                    </ul>
+
+                    <h2>Résultats</h2>
+                    <ul>
+                        <li><strong>Nuage de mots :</strong> Le nuage de mots a mis en évidence les sujets les plus fréquemment discutés dans notre ensemble de données, avec des mentions importantes de COVID-19, de vaccin et de cancer.</li>
+                        <li><strong>Statistiques descriptives :</strong> Notre analyse a montré une préoccupation significative et une discussion intense autour de la pandémie de COVID-19 et des vaccins associés, qui dominaient l'ensemble de données.</li>
+                        <li><strong>Classification des opinions :</strong> Le modèle BERT a atteint une précision globale de 86%, avec des précisions spécifiques de classe pour POUR (97,1%), CONTRE (50%) et NEUTRE (64,3%).</li>
+                        <li><strong>Analyse des sentiments :</strong> L'analyse des sentiments a révélé une fréquence plus élevée de sentiments positifs et neutres par rapport aux sentiments négatifs. Des émotions telles que la joie et l'optimisme étaient prédominantes dans l'ensemble de données.</li>
+                        <li><strong>Modélisation des sujets :</strong> Le modèle LDA a identifié des sujets clés tels que les bienfaits du cannabis pour la santé, l'utilisation de l'huile de CBD et la marijuana médicale. Ces sujets étaient cruciaux pour comprendre les discussions publiques.</li>
+                        <li><strong>Détection de communautés :</strong> L'analyse de détection de communautés a montré des clusters de hashtags liés au cancer et au cannabis, indiquant des thèmes et des discussions communs dans les tweets.</li>
+                        <li><strong>Tableau de bord interactif :</strong> Notre tableau de bord interactif a fourni des informations sur le nombre de likes, de retweets, de commentaires et de combinaisons de hashtags, améliorant la compréhension des dynamiques des tweets.</li>
+                    </ul>
+
                     <h2>Technologies Utilisées</h2>
                     <ul>
-                        <li>Python</li>
-                        <li>Django</li>
-                        <li>D3.js</li>
-                        <li>MongoDB</li>
-                        <li>Matplotlib</li>
+                        <li><strong>Langages de programmation :</strong> Python a été le langage principal utilisé pour le traitement des données, l'analyse et la modélisation.</li>
+                        <li><strong>Bibliothèques de traitement des données :</strong> 
+                            <ul>
+                                <li>Pandas : Pour la manipulation et l'analyse des structures de données.</li>
+                                <li>Numpy : Pour les calculs numériques avancés et le support des tableaux multidimensionnels.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Analyse de texte et NLP :</strong>
+                            <ul>
+                                <li>NLTK : Pour le prétraitement des textes et la manipulation des données textuelles.</li>
+                                <li>SpaCy : Pour la lemmatisation et l'analyse syntaxique.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Modélisation et apprentissage automatique :</strong>
+                            <ul>
+                                <li>Scikit-learn : Pour les tâches de machine learning telles que le clustering et la classification.</li>
+                                <li>TensorFlow et Keras : Pour la construction et l'entraînement du modèle BERT.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Analyse de sentiments et des émotions :</strong>
+                            <ul>
+                                <li>TextBlob : Pour l'analyse des sentiments.</li>
+                                <li>VADER : Pour l'analyse des sentiments spécifiques aux médias sociaux.</li>
+                                <li>Plotly et Matplotlib : Pour la visualisation des résultats d'analyse des sentiments.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Modélisation des sujets :</strong>
+                            <ul>
+                                <li>Gensim : Pour la modélisation de LDA (Latent Dirichlet Allocation).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Visualisation des données :</strong>
+                            <ul>
+                                <li>Plotly et Matplotlib : Pour créer des graphiques interactifs et des visualisations statiques.</li>
+                                <li>Seaborn : Pour des visualisations statistiques avancées.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Traitement des graphes et des réseaux :</strong>
+                            <ul>
+                                <li>NetworkX : Pour la création et l'analyse des graphes de relations entre les hashtags.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Environnements de développement :</strong>
+                            <ul>
+                                <li>Jupyter Notebook : Pour le développement interactif et la visualisation des résultats.</li>
+                                <li>Google Colab : Pour l'entraînement des modèles utilisant GPU.</li>
+                            </ul>
+                        </li>
                     </ul>
+
                     <ul class="actions">
                         <li><a href="https://github.com/alyasltd/TER-2023-2024-Visualisations_de_tweets_controverses" class="button">Voir sur GitHub</a></li>
                     </ul>
