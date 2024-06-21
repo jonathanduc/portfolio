@@ -29,21 +29,35 @@
                     </p>
                     <h2>Méthodologie</h2>
                     <p>
-                        <strong>Exploration des données :</strong> Nettoyage des données et visualisation des distributions et corrélations.
+                        <strong>Exploration des données :</strong> Nettoyage des données, visualisation des distributions et des corrélations, et traitement des valeurs manquantes.
                         <br>
-                        <strong>Préparation des données :</strong> Normalisation et transformation des données pour le modèle.
+                        <strong>Préparation des données :</strong> Normalisation, encodage des variables catégorielles, et division du jeu de données en ensembles d'entraînement et de test.
                         <br>
-                        <strong>Modélisation :</strong> Utilisation de divers algorithmes de classification pour prédire la survie des passagers.
+                        <strong>Modélisation :</strong> Utilisation de divers algorithmes de classification comme la régression logistique, les forêts aléatoires, et les machines à vecteurs de support (SVM) pour prédire la survie des passagers.
                         <br>
-                        <strong>Évaluation :</strong> Comparaison des performances des modèles à l'aide de l'accuracy et de la courbe ROC.
+                        <strong>Évaluation :</strong> Comparaison des performances des modèles à l'aide des métriques telles que l'accuracy, la précision, le rappel, et la courbe ROC.
+                        <br>
+                        <strong>Amélioration :</strong> Optimisation des hyperparamètres et utilisation de techniques d'ensemble pour améliorer les performances des modèles.
+                    </p>
+                    <h2>Résultats</h2>
+                    <p>
+                        <strong>Modèle de base :</strong> La régression logistique a atteint une précision initiale de 78%.
+                        <br>
+                        <strong>Forêt aléatoire :</strong> Après optimisation, le modèle de forêt aléatoire a amélioré la précision à 82%.
+                        <br>
+                        <strong>SVM :</strong> Le modèle SVM a obtenu une précision de 80% avec une courbe ROC montrant une bonne séparation des classes.
+                        <br>
+                        <strong>Modèle final :</strong> En combinant plusieurs modèles avec une méthode d'ensemble, nous avons atteint une précision finale de 84%.
                     </p>
                     <h2>Technologies Utilisées</h2>
                     <ul>
                         <li>Python</li>
                         <li>Pandas</li>
+                        <li>NumPy</li>
                         <li>Scikit-learn</li>
                         <li>Matplotlib</li>
                         <li>Seaborn</li>
+                        <li>Jupyter Notebook</li>
                     </ul>
                 </section>
 
