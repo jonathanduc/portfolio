@@ -1,0 +1,67 @@
+/* === Portfolio overrides (grille cartes + reveal + images) === */
+
+/* Grille cartes projets */
+.posts{
+  display:grid !important;
+  grid-template-columns:repeat(auto-fill, minmax(320px,1fr));
+  gap:2rem;
+  margin-top:1.25rem;
+}
+
+/* Neutralise les contraintes du thème */
+.posts > article{
+  float:none !important;
+  width:auto !important;
+  max-width:none !important;
+  margin:0 !important;
+  display:flex; flex-direction:column;
+  border-radius:12px; overflow:hidden;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.posts > article:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Vignettes */
+.posts .image{ display:block; height:200px; overflow:hidden; }
+.posts .image img, .project-image{
+  width:100% !important; height:100% !important;
+  object-fit:cover; object-position:center; /* + centrage */
+  display:block;
+  min-height:0; /* + fix Safari overflow */
+}
+
+/* Contenu */
+.posts .content{ padding:1rem 1.25rem; display:flex; flex-direction:column; gap:.5rem; }
+.posts h3{ margin:0 0 .25rem; line-height:1.25; }
+
+/* Badges */
+.badge{
+  display:inline-block; padding:.25rem .5rem; border-radius:999px;
+  font-size:.75rem; background:#eef2f7; color:#1f2937; /* + lisibilité */
+  margin:.15rem .25rem 0 0;
+}
+
+/* Buttons en bas des cartes */
+.posts .actions{ margin-top:auto; }
+
+/* Reveal effect */
+.reveal{ opacity:0; transform:translateY(12px); transition:opacity .5s ease, transform .5s ease; }
+.reveal.visible{ opacity:1; transform:none; }
+/* + Respecte les préférences utilisateur */
+@media (prefers-reduced-motion: reduce){
+  .reveal{ transition:none; transform:none; opacity:1; }
+  .posts > article{ transition:none; }
+}
+
+/* Intro */
+.intro-container{ display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap; }
+.profile-pic img{ width:120px; height:120px; border-radius:50%; object-fit:cover; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+.intro-text p{ margin-bottom:.8rem; }
+
+/* Responsive */
+@media (max-width:420px){
+  .posts{ grid-template-columns:1fr; gap:1.25rem; }
+  .posts .image{ height:180px; }
+}
