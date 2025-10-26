@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Public Data Insights - Jonathan Duckes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <div id="main">
+      <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
+          <ul class="icons">
+            <li><a href="https://github.com/jonathanduc" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+          </ul>
+        </header>
+
+        <!-- Project Content -->
+        <section>
+          <header class="main">
+            <h1>Open Data Dashboard</h1>
+            <p style="margin-top:.5rem;color:#6f7a86">Projet en binôme — M2 (Open Data & Web des données)</p>
+          </header>
+
+          <p>
+            Développement d’un <strong>pipeline d’analyse</strong> et d’un <strong>tableau de bord interactif</strong> à partir de jeux de données publics (data.gouv.fr). Le projet inclut la
+            <strong>collecte</strong>, le <strong>nettoyage</strong>, une <strong>mini-API</strong> pour exposer des indicateurs, et des visualisations <strong>Plotly</strong>.
+          </p>
+
+          <h2>Objectifs</h2>
+          <ul>
+            <li>Consolider des jeux de données publics hétérogènes (CSV, API) dans un schéma cohérent.</li>
+            <li>Exposer des indicateurs via une <strong>API Flask</strong> simple et documentée.</li>
+            <li>Offrir un <strong>dashboard interactif</strong> pour l’exploration.</li>
+          </ul>
+
+          <h2>Méthodologie</h2>
+          <ul>
+            <li><strong>Ingestion :</strong> extraction depuis data.gouv.fr (CSV / endpoints), contrôle qualité (types, NA, doublons).</li>
+            <li><strong>Préparation :</strong> normalisation, enrichissement (features dérivées), index temporel.</li>
+            <li><strong>Service :</strong> endpoints Flask pour KPIs (JSON) + pages HTML légères.</li>
+            <li><strong>Visualisation :</strong> graphiques Plotly (séries, cartes, bar charts).</li>
+          </ul>
+
+          <h2>Résultats (exemples)</h2>
+          <ul>
+            <li><strong>Latence API</strong> &lt; 150 ms sur endpoints principaux (local dev).</li>
+            <li><strong>3–5 indicateurs</strong> exposés (moyenne mobile, agrégations par région, top-N).</li>
+            <li><strong>Dashboard</strong> multi-onglets, filtres par période & zone.</li>
+          </ul>
+
+          <h2>Stack & Outils</h2>
+          <ul>
+            <li>Python, <strong>Flask</strong>, Pandas</li>
+            <li>Plotly (visualisation)</li>
+            <li>Requests, JSON</li>
+          </ul>
+
+          <ul class="actions">
+            <li><a href="https://github.com/jonathanduc/OpenData-Project" class="button">Voir sur GitHub</a></li>
+          </ul>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery">
+          <header class="main">
+            <h2>Galerie</h2>
+          </header>
+          <div class="box alt">
+            <div class="row gtr-50 gtr-uniform">
+              <div class="col-4">
+                <a href="#" class="image fit" onclick="openModal('images/opendata/architecture.png','Architecture du pipeline')">
+                  <img src="images/opendata/architecture.png" alt="Architecture du pipeline" />
+                  <h4>Architecture du pipeline</h4>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="image fit" onclick="openModal('images/opendata/dashboard.png','Dashboard Plotly')">
+                  <img src="images/opendata/dashboard.png" alt="Dashboard Plotly" />
+                  <h4>Dashboard Plotly</h4>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="image fit" onclick="openModal('images/opendata/api_endpoint.png','Endpoint API Flask')">
+                  <img src="images/opendata/api_endpoint.png" alt="Endpoint API Flask" />
+                  <h4>Endpoint API Flask</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img class="modal-content" id="img01">
+          <div class="caption" id="caption"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/modal.js"></script>
+</body>
+</html>
