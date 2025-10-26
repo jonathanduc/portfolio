@@ -1,105 +1,87 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Spaceship Titanic - Jonathan Duckes</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+  <title>Spaceship Titanic - Jonathan Duckes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/overrides.css" />
 </head>
 <body class="is-preload">
-    <div id="wrapper">
-        <div id="main">
-            <div class="inner">
-                <!-- Header -->
-                <header id="header">
-                    <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
-                    <ul class="icons">
-                        <li><a href="https://github.com/jonathanduc" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-                </header>
+  <div id="wrapper">
+    <div id="main">
+      <div class="inner">
 
-                <!-- Project Content -->
-                <section>
-                    <header class="main">
-                        <h1>Spaceship Titanic</h1>
-                    </header>
-                    <p>
-                        Projet dans le cadre d'une compétition Kaggle "Spaceship Titanic". Le but du projet était de prédire quels passagers ont été transportés dans une dimension alternative suite à une collision du vaisseau avec une anomalie spatio-temporelle. Les étapes du projet incluent l'analyse des données, la modélisation, l'évaluation des modèles et la soumission sur Kaggle.
-                    </p>
-                    <h2>Méthodologie</h2>
-                    <p>
-                        <strong>Exploration des données :</strong> Nettoyage des données, visualisation des distributions et des corrélations, et traitement des valeurs manquantes.
-                        <br>
-                        <strong>Préparation des données :</strong> Normalisation, encodage des variables catégorielles, et division du jeu de données en ensembles d'entraînement et de test.
-                        <br>
-                        <strong>Modélisation :</strong> Utilisation de divers algorithmes de classification comme la régression logistique, les forêts aléatoires, et les machines à vecteurs de support (SVM) pour prédire la survie des passagers.
-                        <br>
-                        <strong>Évaluation :</strong> Comparaison des performances des modèles à l'aide des métriques telles que l'accuracy, la précision, le rappel, et la courbe ROC.
-                        <br>
-                        <strong>Amélioration :</strong> Optimisation des hyperparamètres et utilisation de techniques d'ensemble pour améliorer les performances des modèles.
-                    </p>
-                    <h2>Résultats</h2>
-                    <p>
-                        <strong>Modèle de base :</strong> La régression logistique a atteint une précision initiale de 78%.
-                        <br>
-                        <strong>Forêt aléatoire :</strong> Après optimisation, le modèle de forêt aléatoire a amélioré la précision à 82%.
-                        <br>
-                        <strong>SVM :</strong> Le modèle SVM a obtenu une précision de 80% avec une courbe ROC montrant une bonne séparation des classes.
-                        <br>
-                        <strong>Modèle final :</strong> En combinant plusieurs modèles avec une méthode d'ensemble, nous avons atteint une précision finale de 84%.
-                    </p>
-                    <h2>Technologies Utilisées</h2>
-                    <ul>
-                        <li>Python</li>
-                        <li>Pandas</li>
-                        <li>NumPy</li>
-                        <li>Scikit-learn</li>
-                        <li>Matplotlib</li>
-                        <li>Seaborn</li>
-                        <li>Jupyter Notebook</li>
-                    </ul>
-                </section>
+        <!-- Header -->
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
+          <ul class="icons">
+            <li><a href="https://github.com/jonathanduc" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+          </ul>
+        </header>
 
-                <!-- Gallery Section -->
-                <section class="gallery">
-                    <header class="main">
-                        <h2>Galerie</h2>
-                    </header>
-                    <div class="box alt">
-                        <div class="row gtr-50 gtr-uniform">
-                            <div class="col-4">
-                                <a href="#" class="image fit" onclick="openModal('images/spaceship_titanic/analysis.png', 'Analyse des données')">
-                                    <img src="images/spaceship_titanic/analysis.png" alt="Analyse des données" />
-                                    <h4>Analyse des données</h4>
-                                </a>
-                            </div>
-                            <div class="col-4">
-                                <a href="#" class="image fit" onclick="openModal('images/spaceship_titanic/correlation_matrix.png', 'Matrice de corrélation')">
-                                    <img src="images/spaceship_titanic/correlation_matrix.png" alt="Matrice de corrélation" />
-                                    <h4>Matrice de corrélation</h4>
-                                </a>
-                            </div>
-                            <div class="col-4">
-                                <a href="#" class="image fit" onclick="openModal('images/spaceship_titanic/roc_curve.png', 'Courbe ROC du modèle SVM')">
-                                    <img src="images/spaceship_titanic/roc_curve.png" alt="Courbe ROC du modèle SVM" />
-                                    <h4>Courbe ROC des modèles Random Forrest, SVM et Linear Regression</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        <!-- Project Content -->
+        <section>
+          <header class="main">
+            <h1>Spaceship Titanic</h1>
+          </header>
+          <p>Projet dans le cadre d'une compétition Kaggle "Spaceship Titanic". Le but du projet était de prédire quels passagers ont été transportés dans une dimension alternative suite à une collision du vaisseau avec une anomalie spatio-temporelle. Les étapes du projet incluent l'analyse des données, la modélisation, l'évaluation des modèles et la soumission sur Kaggle.</p>
 
+          <h2>Méthodologie</h2>
+          <p>
+            <strong>Exploration des données :</strong> Nettoyage des données, visualisation des distributions et des corrélations, et traitement des valeurs manquantes.<br>
+            <strong>Préparation des données :</strong> Normalisation, encodage des variables catégorielles, et division du jeu de données en ensembles d'entraînement et de test.<br>
+            <strong>Modélisation :</strong> Utilisation de divers algorithmes de classification comme la régression logistique, les forêts aléatoires, et les machines à vecteurs de support (SVM).<br>
+            <strong>Évaluation :</strong> Accuracy, précision, rappel, et courbe ROC.<br>
+            <strong>Amélioration :</strong> Optimisation des hyperparamètres et ensembling.
+          </p>
 
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="img01">
-                    <div class="caption" id="caption"></div>
-                </div>
+          <h2>Technologies Utilisées</h2>
+          <ul>
+            <li>Python — Pandas, NumPy, Scikit-learn</li>
+            <li>Visualisation — Matplotlib, Seaborn</li>
+            <li>Notebook — Jupyter</li>
+          </ul>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery">
+          <header class="main"><h2>Galerie</h2></header>
+          <div class="box alt">
+            <div class="row gtr-50 gtr-uniform">
+              <div class="col-4">
+                <a href="#" class="image fit" onclick="openModal('images/spaceship_titanic/analysis.png','Analyse des données')">
+                  <img src="images/spaceship_titanic/analysis.png" alt="Analyse des données" loading="lazy" />
+                  <h4>Analyse des données</h4>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="image fit" onclick="openModal('images/spaceship_titanic/correlation_matrix.png','Matrice de corrélation')">
+                  <img src="images/spaceship_titanic/correlation_matrix.png" alt="Matrice de corrélation" loading="lazy" />
+                  <h4>Matrice de corrélation</h4>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="image fit" onclick="openModal('images/spaceship_titanic/roc_curve.png','Courbe ROC des modèles')">
+                  <img src="images/spaceship_titanic/roc_curve.png" alt="Courbe ROC des modèles" loading="lazy" />
+                  <h4>Courbe ROC des modèles</h4>
+                </a>
+              </div>
             </div>
+          </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img class="modal-content" id="img01">
+          <div class="caption" id="caption"></div>
         </div>
+
+      </div>
     </div>
-    <script src="assets/js/modal.js"></script>
+  </div>
+  <script src="assets/js/modal.js"></script>
 </body>
 </html>
