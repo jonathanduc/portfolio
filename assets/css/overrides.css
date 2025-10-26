@@ -3,6 +3,8 @@
 /* 1) Grille robuste */
 .posts{
   display:grid !important;
+  margin: 0 0 2rem 0 !important;
+  width: 100% !important;
   grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
   gap:2rem;
 }
