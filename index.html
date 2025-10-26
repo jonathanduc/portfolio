@@ -5,18 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <style>
-    .posts { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; }
-    .posts article{ transition:transform .25s ease, box-shadow .25s ease; border-radius:10px; overflow:hidden; }
-    .posts article:hover{ transform:translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,.08); }
-    .project-image{ object-fit:cover; width:100%; height:180px; }
-    .badge{ display:inline-block; padding:.25rem .5rem; border-radius:999px; font-size:.75rem; background:#eef2f7; margin:.15rem .25rem 0 0;}
-    .reveal{ opacity:0; transform:translateY(12px); transition:opacity .5s ease, transform .5s ease; }
-    .reveal.visible{ opacity:1; transform:none; }
-    .intro-container{ display:flex; gap:1.25rem; align-items:center; flex-wrap:wrap; }
-    .profile-pic img{ width:120px; height:120px; border-radius:50%; object-fit:cover; box-shadow:0 6px 20px rgba(0,0,0,.08); }
-    .intro-text p{ margin-bottom:.8rem; }
-  </style>
+  <link rel="stylesheet" href="assets/css/overrides.css" />
 </head>
 <body class="is-preload">
   <div id="wrapper">
@@ -27,8 +16,8 @@
         <header id="header">
           <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
           <ul class="icons">
-            <li><a href="https://github.com/jonathanduc" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-            <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/jonathanduc" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
           </ul>
         </header>
 
@@ -37,7 +26,7 @@
           <div class="content">
             <div class="intro-container">
               <div class="profile-pic">
-                <img src="images/profile.jpg" alt="Jonathan Duckes" />
+                <img src="images/profile.jpg" alt="Jonathan Duckes" loading="lazy" width="240" height="240" />
               </div>
               <div class="intro-text">
                 <header>
@@ -60,15 +49,15 @@
             <!-- Spaceship Titanic -->
             <article>
               <a href="spaceship-titanic.html" class="image">
-                <img src="images/spaceship_titanic/spaceship_titanic.png" alt="Spaceship Titanic" class="project-image" />
+                <img src="images/spaceship_titanic/spaceship_titanic.png" alt="Spaceship Titanic" class="project-image" loading="lazy" width="800" height="450" />
               </a>
-              <div class="content" style="padding:1rem 1.25rem;">
+              <div class="content">
                 <h3>Spaceship Titanic — Kaggle</h3>
                 <p>Classification supervisée pour prédire le statut des passagers. Feature engineering, validation croisée robuste, interprétabilité.</p>
                 <p><span class="badge">Python</span><span class="badge">Pandas</span><span class="badge">Scikit-Learn</span><span class="badge">Matplotlib</span></p>
                 <ul class="actions">
                   <li><a href="spaceship-titanic.html" class="button">Détails</a></li>
-                  <li><a href="https://github.com/jonathanduc/spaceship-titanic" class="button">GitHub</a></li>
+                  <li><a href="https://github.com/jonathanduc/spaceship-titanic" class="button" target="_blank" rel="noopener">GitHub</a></li>
                 </ul>
               </div>
             </article>
@@ -76,16 +65,16 @@
             <!-- INM-Explain -->
             <article>
               <a href="tweets_controversies.html" class="image">
-                <img src="images/tweets_controverses/inm-explain.png" alt="INM-Explain — Tweets controverses" class="project-image" />
+                <img src="images/tweets_controverses/inm-explain.png" alt="INM-Explain — Tweets controverses" class="project-image" loading="lazy" width="800" height="450" />
               </a>
-              <div class="content" style="padding:1rem 1.25rem;">
+              <div class="content">
                 <h3>INM-Explain — Tweets controverses (LIRMM)</h3>
                 <p>NLP sur &gt;5M de tweets (santé) : RoBERTa, LDA, indice de controverse. Application Streamlit interactive.</p>
                 <p><span class="badge">Python</span><span class="badge">Transformers</span><span class="badge">Pandas</span><span class="badge">Streamlit</span><span class="badge">Plotly</span></p>
                 <ul class="actions">
                   <li><a href="tweets_controversies.html" class="button">Détails</a></li>
-                  <li><a href="https://github.com/alyasltd/INM-Explain" class="button">GitHub</a></li>
-                  <li><a href="http://advanse.lirmm.fr/controverse/index.html" class="button">Site</a></li>
+                  <li><a href="https://github.com/alyasltd/INM-Explain" class="button" target="_blank" rel="noopener">GitHub</a></li>
+                  <li><a href="http://advanse.lirmm.fr/controverse/index.html" class="button" target="_blank" rel="noopener">Site</a></li>
                 </ul>
               </div>
             </article>
@@ -93,15 +82,12 @@
             <!-- Open Data Dashboard (OMS) -->
             <article>
               <a href="opendata.html" class="image">
-                <img src="images/opendata/choropleth.png" alt="Open Data Dashboard (OMS)" class="project-image" />
+                <img src="images/opendata/choropleth.png" alt="Open Data Dashboard (OMS)" class="project-image" loading="lazy" width="800" height="450" />
               </a>
-              <div class="content" style="padding:1rem 1.25rem;">
+              <div class="content">
                 <h3>Open Data Dashboard (OMS) — Streamlit</h3>
                 <p>Exploration d’indicateurs de santé publique via l’API <strong>OMS/GHO</strong>. Analyses interactives, <em>régression linéaire</em> (prévision), <em>PCA + KMeans</em> (profilage pays) et <em>choroplèthes</em>.</p>
-                <p>
-                  <span class="badge">Python</span><span class="badge">Streamlit</span><span class="badge">Pandas</span>
-                  <span class="badge">scikit-learn</span><span class="badge">Plotly</span><span class="badge">GeoPandas</span><span class="badge">Folium</span>
-                </p>
+                <p><span class="badge">Python</span><span class="badge">Streamlit</span><span class="badge">Pandas</span><span class="badge">scikit-learn</span><span class="badge">Plotly</span><span class="badge">GeoPandas</span><span class="badge">Folium</span></p>
                 <ul class="actions">
                   <li><a href="opendata.html" class="button">Détails</a></li>
                   <li><a href="https://opendata-project-mwml8pz3ckzih9xtmnb22f.streamlit.app/" class="button" target="_blank" rel="noopener">App</a></li>
@@ -110,17 +96,18 @@
               </div>
             </article>
 
-            <!-- Projet API -->
+            <!-- Projet API — Recipes & Nutrition -->
             <article>
-              <a href="https://github.com/aaudric/projet-api" class="image">
-                <img src="images/api/api_preview.png" alt="Projet API — Intégration de données" class="project-image" />
+              <a href="api.html" class="image">
+                <img src="images/api/api_preview.png" alt="Recipes & Nutrition — Data Integration API" class="project-image" loading="lazy" width="800" height="450" />
               </a>
-              <div class="content" style="padding:1rem 1.25rem;">
-                <h3>Projet API — Intégration de données connectées</h3>
-                <p>API REST pour agréger et exposer des flux hétérogènes. Endpoints dynamiques et documentation OpenAPI.</p>
-                <p><span class="badge">FastAPI</span><span class="badge">SQL</span><span class="badge">Docker</span></p>
+              <div class="content">
+                <h3>Recipes & Nutrition — Data Integration API</h3>
+                <p>Backend <strong>Node.js/Express</strong> agrégeant <strong>Spoonacular</strong> (recettes) et <strong>Open Food Facts</strong> (NutriScores). Frontend léger pour filtrer, lister et consulter le détail des ingrédients.</p>
+                <p><span class="badge">Node.js</span><span class="badge">Express</span><span class="badge">Swagger</span><span class="badge">Spoonacular</span><span class="badge">Open Food Facts</span><span class="badge">HTML/CSS/JS</span></p>
                 <ul class="actions">
-                  <li><a href="https://github.com/aaudric/projet-api" class="button">GitHub</a></li>
+                  <li><a href="api.html" class="button">Détails</a></li>
+                  <li><a href="https://github.com/aaudric/projet-api" class="button" target="_blank" rel="noopener">GitHub</a></li>
                 </ul>
               </div>
             </article>
@@ -128,9 +115,9 @@
             <!-- YOLO -->
             <article>
               <a href="yolo.html" class="image">
-                <img src="images/geometry_recognition/yolo.png" alt="Reconnaissance d’objets géométriques" class="project-image" />
+                <img src="images/geometry_recognition/yolo.png" alt="Reconnaissance d’objets géométriques" class="project-image" loading="lazy" width="800" height="450" />
               </a>
-              <div class="content" style="padding:1rem 1.25rem;">
+              <div class="content">
                 <h3>Reconnaissance d’objets géométriques — Deep Learning</h3>
                 <p>Projet de fin de licence : détection et classification d’objets géométriques via un modèle YOLOv5 pré-entraîné.</p>
                 <p><span class="badge">Python</span><span class="badge">YOLOv5</span><span class="badge">OpenCV</span><span class="badge">Deep Learning</span></p>
