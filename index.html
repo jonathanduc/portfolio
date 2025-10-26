@@ -1,5 +1,66 @@
 <!DOCTYPE HTML>
 <html>
+<!-- FIX mise en page cartes (neutralise le thème HTML5UP) -->
+<style>
+  /* 1) Grille */
+  #main .posts{
+    display:grid !important;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    gap:2rem;
+  }
+
+  /* 2) Cartes */
+  #main .posts > article{
+    float:none !important;
+    width:auto !important;
+    max-width:none !important;
+    margin:0 !important;
+    display:flex; flex-direction:column;
+    border-radius:12px; overflow:hidden;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  #main .posts > article:hover{ transform:translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,.08); }
+
+  /* 3) Vignettes (désactive le ratio du thème) */
+  #main .posts > article a.image,
+  #main .posts > article .image{
+    display:block !important;
+    position:relative !important;
+    height:200px !important;
+    overflow:hidden !important;
+    border:0 !important;
+  }
+  #main .posts > article a.image:before,
+  #main .posts > article .image:before{
+    content:none !important; display:none !important;
+  }
+
+  /* 4) Image pleine vignette */
+  #main .posts > article a.image img,
+  #main .posts > article .image img,
+  #main .posts .project-image{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    margin:0 !important; border-radius:0 !important; min-height:0 !important;
+    display:block !important;
+  }
+
+  /* 5) Contenu & badges */
+  #main .posts .content{ padding:1rem 1.25rem; display:flex; flex-direction:column; gap:.5rem; }
+  #main .posts h3{ margin:0 0 .25rem; line-height:1.25; }
+  #main .posts .badge{ display:inline-block; padding:.25rem .5rem; border-radius:999px; font-size:.75rem; background:#eef2f7; color:#1f2937; margin:.15rem .25rem 0 0; }
+  #main .posts .actions{ margin-top:auto; }
+
+  /* 6) Responsive */
+  @media (max-width:420px){
+    #main .posts{ grid-template-columns:1fr; gap:1.25rem; }
+    #main .posts > article .image{ height:180px !important; }
+  }
+</style>
 <head>
   <title>Portfolio de Jonathan Duckes</title>
   <meta charset="utf-8" />
