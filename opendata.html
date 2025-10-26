@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Public Data Insights - Jonathan Duckes</title>
+  <title>Open Data Dashboard (OMS) - Jonathan Duckes</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -23,46 +23,48 @@
         <!-- Project Content -->
         <section>
           <header class="main">
-            <h1>Open Data Dashboard</h1>
-            <p style="margin-top:.5rem;color:#6f7a86">Projet en binôme — M2 (Open Data & Web des données)</p>
+            <h1>Open Data Dashboard — OMS (GHO)</h1>
+            <p style="margin-top:.5rem;color:#6f7a86">Projet en binôme — M2 (Open Data & Web des données) — Jonathan Duckes &amp; Audric Girondin</p>
           </header>
 
           <p>
-            Développement d’un <strong>pipeline d’analyse</strong> et d’un <strong>tableau de bord interactif</strong> à partir de jeux de données publics (data.gouv.fr). Le projet inclut la
-            <strong>collecte</strong>, le <strong>nettoyage</strong>, une <strong>mini-API</strong> pour exposer des indicateurs, et des visualisations <strong>Plotly</strong>.
+            Application web <strong>Streamlit</strong> d’exploration et d’analyse de données de santé publique issues de l’<strong>API GHO de l’OMS</strong>.
+            L’app récupère dynamiquement les indicateurs, propose des analyses descriptives & visualisations, et intègre un module <strong>Machine Learning</strong> :
+            <em>régression linéaire</em> (prévision temporelle) et <em>clustering KMeans</em> (profilage pays via <strong>PCA</strong>).
           </p>
+
+          <ul class="actions" style="margin-top:1rem;">
+            <li><a href="https://opendata-project-mwml8pz3ckzih9xtmnb22f.streamlit.app/" class="button primary">Voir l’application</a></li>
+            <li><a href="https://github.com/jonathanduc/OpenData-Project" class="button">Voir sur GitHub</a></li>
+          </ul>
 
           <h2>Objectifs</h2>
           <ul>
-            <li>Consolider des jeux de données publics hétérogènes (CSV, API) dans un schéma cohérent.</li>
-            <li>Exposer des indicateurs via une <strong>API Flask</strong> simple et documentée.</li>
-            <li>Offrir un <strong>dashboard interactif</strong> pour l’exploration.</li>
+            <li>Rendre des <strong>indicateurs OMS</strong> accessibles via un <strong>dashboard interactif</strong>.</li>
+            <li>Permettre une <strong>analyse temporelle</strong> (tendances & prévisions) et un <strong>profilage</strong> de pays.</li>
+            <li>Proposer des <strong>visualisations géographiques</strong> pour comparer les régions.</li>
           </ul>
 
-          <h2>Méthodologie</h2>
+          <h2>Fonctionnalités principales</h2>
           <ul>
-            <li><strong>Ingestion :</strong> extraction depuis data.gouv.fr (CSV / endpoints), contrôle qualité (types, NA, doublons).</li>
-            <li><strong>Préparation :</strong> normalisation, enrichissement (features dérivées), index temporel.</li>
-            <li><strong>Service :</strong> endpoints Flask pour KPIs (JSON) + pages HTML légères.</li>
-            <li><strong>Visualisation :</strong> graphiques Plotly (séries, cartes, bar charts).</li>
+            <li><strong>Analyse de données :</strong> sélection d’un indicateur “Health*” → stats descriptives, graphes (barres/lignes), filtres pays/années.</li>
+            <li><strong>ML — Régression :</strong> droite de tendance + prédictions, coefficient/intercept/score <em>R²</em>.</li>
+            <li><strong>ML — Clustering :</strong> normalisation, <strong>PCA</strong> (2D) et <strong>KMeans</strong> (sélection via méthode du coude).</li>
+            <li><strong>Cartographie :</strong> choroplèthe (Plotly), carte GeoPandas/Folium pour l’agrégation pays.</li>
           </ul>
 
-          <h2>Résultats (exemples)</h2>
+          <h2>Stack & données</h2>
           <ul>
-            <li><strong>Latence API</strong> &lt; 150 ms sur endpoints principaux (local dev).</li>
-            <li><strong>3–5 indicateurs</strong> exposés (moyenne mobile, agrégations par région, top-N).</li>
-            <li><strong>Dashboard</strong> multi-onglets, filtres par période & zone.</li>
+            <li><strong>Python</strong> — Streamlit, Pandas, NumPy, scikit-learn (LinearRegression, KMeans, PCA)</li>
+            <li><strong>Visualisation</strong> — Plotly, GeoPandas, Folium</li>
+            <li><strong>Source</strong> — OMS / GHO API (indicateurs, séries par pays & année)</li>
           </ul>
 
-          <h2>Stack & Outils</h2>
+          <h2>Défis & améliorations</h2>
           <ul>
-            <li>Python, <strong>Flask</strong>, Pandas</li>
-            <li>Plotly (visualisation)</li>
-            <li>Requests, JSON</li>
-          </ul>
-
-          <ul class="actions">
-            <li><a href="https://github.com/jonathanduc/OpenData-Project" class="button">Voir sur GitHub</a></li>
+            <li><strong>Données manquantes</strong> : filtrage & imputation.</li>
+            <li><strong>Latence API</strong> : limitation d’indicateurs / cache.</li>
+            <li><strong>Évolutions</strong> : + d’indicateurs, modèles ML avancés, actualisation planifiée.</li>
           </ul>
         </section>
 
@@ -74,21 +76,21 @@
           <div class="box alt">
             <div class="row gtr-50 gtr-uniform">
               <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/opendata/architecture.png','Architecture du pipeline')">
-                  <img src="images/opendata/architecture.png" alt="Architecture du pipeline" />
-                  <h4>Architecture du pipeline</h4>
+                <a href="#" class="image fit" onclick="openModal('images/opendata/regression.png','Régression linéaire & prédictions')">
+                  <img src="images/opendata/regression.png" alt="Régression linéaire & prédictions" />
+                  <h4>Régression linéaire & prédictions</h4>
                 </a>
               </div>
               <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/opendata/dashboard.png','Dashboard Plotly')">
-                  <img src="images/opendata/dashboard.png" alt="Dashboard Plotly" />
-                  <h4>Dashboard Plotly</h4>
+                <a href="#" class="image fit" onclick="openModal('images/opendata/pca_clusters.png','PCA + Clustering KMeans (pays)')">
+                  <img src="images/opendata/pca_clusters.png" alt="PCA + Clustering KMeans (pays)" />
+                  <h4>PCA + Clustering KMeans (pays)</h4>
                 </a>
               </div>
               <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/opendata/api_endpoint.png','Endpoint API Flask')">
-                  <img src="images/opendata/api_endpoint.png" alt="Endpoint API Flask" />
-                  <h4>Endpoint API Flask</h4>
+                <a href="#" class="image fit" onclick="openModal('images/opendata/choropleth.png','Choroplèthe des indicateurs par pays')">
+                  <img src="images/opendata/choropleth.png" alt="Choroplèthe des indicateurs par pays" />
+                  <h4>Choroplèthe des indicateurs par pays</h4>
                 </a>
               </div>
             </div>
