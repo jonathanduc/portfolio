@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Recipes & Nutrition — Data Integration API - Jonathan Duckes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+  <div id="wrapper">
+    <div id="main">
+      <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
+          <ul class="icons">
+            <li><a href="https://github.com/jonathanduc" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+          </ul>
+        </header>
+
+        <!-- Project Content -->
+        <section>
+          <header class="main">
+            <h1>Recipes & Nutrition — Data Integration API</h1>
+            <p style="margin-top:.5rem;color:#6f7a86">Projet en binôme — <strong>Node.js / Express</strong> + Spoonacular & Open Food Facts — Swagger</p>
+          </header>
+
+          <!-- Demo Video -->
+          <video autoplay loop muted playsinline style="width:100%;border-radius:8px;margin-bottom:1rem;" poster="images/api/demo_poster.jpg">
+            <source src="images/api/demo.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+          </video>
+
+          <p>
+            Application web permettant de découvrir des recettes et d’afficher, pour chaque ingrédient, des informations nutritionnelles
+            (dont NutriScores) en connectant deux APIs : <strong>Spoonacular</strong> (recettes) et <strong>Open Food Facts</strong> (nutrition).
+            Le backend <strong>Node.js / Express</strong> sert de couche d’intégration : il agrège, normalise et expose les données via une API unique,
+            documentée avec <strong>Swagger</strong>.
+          </p>
+
+          <ul class="actions" style="margin-top:1rem;">
+            <li><a href="https://github.com/aaudric/projet-api" class="button" target="_blank" rel="noopener">Voir sur GitHub</a></li>
+          </ul>
+
+          <h2>Objectifs</h2>
+          <ul>
+            <li>Unifier des sources hétérogènes (recettes + nutrition) derrière une <strong>API REST</strong> unique.</li>
+            <li>Fournir une <strong>UI web</strong> simple pour filtrer type de recette, cuisine & nombre de résultats.</li>
+            <li>Documenter et tester l’API via <strong>Swagger UI</strong> (<code>/api-docs</code>).</li>
+          </ul>
+
+          <h2>Architecture & Méthodologie</h2>
+          <ul>
+            <li><strong>Backend (Express)</strong> : routes REST, validation d’inputs, normalisation de schémas.</li>
+            <li><strong>APIs externes</strong> : proxification des appels Spoonacular & Open Food Facts.</li>
+            <li><strong>Config</strong> : variables d’environnement (<code>.env</code>) pour clés & ports.</li>
+            <li><strong>Frontend</strong> : HTML/CSS/JS + <em>lite-server</em> pour le dev (rechargement auto).</li>
+            <li><strong>Docs</strong> : Swagger (OpenAPI) exposé sur <code>/api-docs</code>.</li>
+          </ul>
+
+          <h2>Endpoints (exemples)</h2>
+          <ul>
+            <li><code>GET /recipes?type={dessert|main}&cuisine={french|...}&limit=10</code> — liste de recettes (titre, image, ingrédients)</li>
+            <li><code>GET /nutrition?ingredient=tomato</code> — infos nutritionnelles & NutriScore par ingrédient</li>
+          </ul>
+
+          <h2>Stack & Outils</h2>
+          <ul>
+            <li><strong>Backend</strong> : Node.js, Express, Swagger (OpenAPI)</li>
+            <li><strong>Frontend</strong> : HTML, CSS, JavaScript, lite-server</li>
+            <li><strong>Intégrations</strong> : Spoonacular API, Open Food Facts</li>
+          </ul>
+
+          <h2>Résultats & Points forts</h2>
+          <ul>
+            <li>Parcours simple : filtrage → liste → détails ingrédients + NutriScores.</li>
+            <li>API documentée (Swagger) facilitant les tests depuis le navigateur.</li>
+            <li>Architecture claire, facilement extensible (autres sources, nouveaux champs nutritionnels).</li>
+          </ul>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery">
+          <header class="main">
+            <h2>Galerie</h2>
+          </header>
+          <div class="box alt">
+            <div class="row gtr-50 gtr-uniform">
+              <div class="col-4">
+                <a href="#" class="image fit" onclick="openModal('images/api/swagger_ui.png','Swagger UI — Documentation de l’API')">
+                  <img src="images/api/swagger_ui.png" alt="Swagger UI" />
+                  <h4>Swagger UI</h4>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="image fit" onclick="openModal('images/api/openapi.png','Spécification OpenAPI')">
+                  <img src="images/api/openapi.png" alt="OpenAPI spec" />
+                  <h4>Spécification OpenAPI</h4>
+                </a>
+              </div>
+              <div class="col-4">
+                <a href="#" class="image fit" onclick="openModal('images/api/api_preview.png','UI — Recipes & Nutrition')">
+                  <img src="images/api/api_preview.png" alt="UI — Recipes & Nutrition" />
+                  <h4>UI — Recipes & Nutrition</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img class="modal-content" id="img01">
+          <div class="caption" id="caption"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/modal.js"></script>
+</body>
+</html>
