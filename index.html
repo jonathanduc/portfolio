@@ -1,147 +1,64 @@
 <!DOCTYPE HTML>
-<html>
-<!-- Styles spécifiques aux cartes déplacés vers assets/css/overrides.css -->
+<html lang="fr">
 <head>
-  <title>Portfolio de Jonathan Duckes</title>
+  <title>Jonathan Duckes - Data Scientist, AI & Data Engineer</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Portfolio de Jonathan Duckes - Data Scientist, AI & Data Engineer junior." />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/overrides.css" />
+  <link rel="stylesheet" href="assets/css/refresh-2026.css" />
 </head>
-<body class="is-preload">
-  <div id="wrapper">
-    <div id="main">
-      <div class="inner">
+<body class="is-preload"><div id="wrapper"><div id="main"><div class="inner">
 
-        <!-- Header -->
-        <header id="header">
-          <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
-          <ul class="icons">
-            <li><a href="https://github.com/jonathanduc" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
-            <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
-          </ul>
-        </header>
+<header id="header">
+  <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
+  <ul class="icons">
+    <li><a href="https://github.com/jonathanduc" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+    <li><a href="https://www.linkedin.com/in/jonathan-duckes/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+  </ul>
+</header>
 
-        <!-- Introduction -->
-        <section id="intro" class="reveal">
-          <div class="content">
-            <div class="intro-container">
-              <div class="profile-pic">
-                <img src="images/profile.jpg" alt="Jonathan Duckes" loading="lazy" width="240" height="240" />
-              </div>
-              <div class="intro-text">
-                <header>
-                  <h1>Bienvenue sur mon portfolio</h1>
-                  <p>Bonjour, je suis Jonathan Duckes, <strong>diplômé du Master MIASHS</strong> (Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales) à l’Université Paul-Valéry Montpellier 3. <strong>Data Scientist / Data Engineer junior</strong>, je conçois des solutions de bout en bout : collecte et préparation des données, modèles de Machine Learning, APIs et visualisations. Ce site présente une sélection de projets phares, orientés impact et bonnes pratiques (reproductibilité, clarté, démo).</p>
-                  <p>Hello! I’m Jonathan Duckes, a <strong>Master MIASHS graduate</strong> (Applied Mathematics & Computer Science for Social Sciences) from Université Paul-Valéry Montpellier 3. As a <strong>junior Data Scientist / Data Engineer</strong>, I build end-to-end data solutions: data pipelines, ML models, APIs and interactive visuals. Below is a curated set of featured projects focused on impact and best practices.</p>
-                </header>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="reveal">
-          <header class="main">
-            <h2>Projets phares / Featured Projects</h2>
-          </header>
-
-          <div class="posts">
-            <!-- Spaceship Titanic -->
-            <article>
-              <a href="spaceship-titanic.html" class="image">
-                <img src="images/spaceship_titanic/spaceship_titanic.png" alt="Spaceship Titanic" class="project-image" loading="lazy" width="800" height="450" />
-              </a>
-              <div class="content">
-                <h3>Spaceship Titanic — Kaggle</h3>
-                <p>Classification supervisée pour prédire le statut des passagers. Feature engineering, validation croisée robuste, interprétabilité.</p>
-                <p><span class="badge">Python</span><span class="badge">Pandas</span><span class="badge">Scikit-Learn</span><span class="badge">Matplotlib</span></p>
-                <ul class="actions">
-                  <li><a href="spaceship-titanic.html" class="button">Détails</a></li>
-                  <li><a href="https://github.com/jonathanduc/spaceship-titanic" class="button" target="_blank" rel="noopener">GitHub</a></li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- INM-Explain -->
-            <article>
-              <a href="tweets_controversies.html" class="image">
-                <img src="images/tweets_controverses/inm-explain.png" alt="INM-Explain — Tweets controverses" class="project-image" loading="lazy" width="800" height="450" />
-              </a>
-              <div class="content">
-                <h3>INM-Explain — Tweets controverses (LIRMM)</h3>
-                <p>NLP sur &gt;5M de tweets (santé) : RoBERTa, LDA, indice de controverse. Application Streamlit interactive.</p>
-                <p><span class="badge">Python</span><span class="badge">Transformers</span><span class="badge">Pandas</span><span class="badge">Streamlit</span><span class="badge">Plotly</span></p>
-                <ul class="actions">
-                  <li><a href="tweets_controversies.html" class="button">Détails</a></li>
-                  <li><a href="https://github.com/alyasltd/INM-Explain" class="button" target="_blank" rel="noopener">GitHub</a></li>
-                  <li><a href="http://advanse.lirmm.fr/controverse/index.html" class="button" target="_blank" rel="noopener">Site</a></li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- Open Data Dashboard (OMS) -->
-            <article>
-              <a href="opendata.html" class="image">
-                <img src="images/opendata/choropleth.png" alt="Open Data Dashboard (OMS)" class="project-image" loading="lazy" width="800" height="450" />
-              </a>
-              <div class="content">
-                <h3>Open Data Dashboard (OMS) — Streamlit</h3>
-                <p>Exploration d’indicateurs de santé publique via l’API <strong>OMS/GHO</strong>. Analyses interactives, <em>régression linéaire</em> (prévision), <em>PCA + KMeans</em> (profilage pays) et <em>choroplèthes</em>.</p>
-                <p><span class="badge">Python</span><span class="badge">Streamlit</span><span class="badge">Pandas</span><span class="badge">scikit-learn</span><span class="badge">Plotly</span><span class="badge">GeoPandas</span><span class="badge">Folium</span></p>
-                <ul class="actions">
-                  <li><a href="opendata.html" class="button">Détails</a></li>
-                  <li><a href="https://opendata-project-mwml8pz3ckzih9xtmnb22f.streamlit.app/" class="button" target="_blank" rel="noopener">App</a></li>
-                  <li><a href="https://github.com/jonathanduc/OpenData-Project" class="button" target="_blank" rel="noopener">GitHub</a></li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- Projet API — Recipes & Nutrition -->
-            <article>
-              <a href="api.html" class="image">
-                <img src="images/api/api_preview.png" alt="Recipes & Nutrition — Data Integration API" class="project-image" loading="lazy" width="800" height="450" />
-              </a>
-              <div class="content">
-                <h3>Recipes & Nutrition — Data Integration API</h3>
-                <p>Backend <strong>Node.js/Express</strong> agrégeant <strong>Spoonacular</strong> (recettes) et <strong>Open Food Facts</strong> (NutriScores). Frontend léger pour filtrer, lister et consulter le détail des ingrédients.</p>
-                <p><span class="badge">Node.js</span><span class="badge">Express</span><span class="badge">Swagger</span><span class="badge">Spoonacular</span><span class="badge">Open Food Facts</span><span class="badge">HTML/CSS/JS</span></p>
-                <ul class="actions">
-                  <li><a href="api.html" class="button">Détails</a></li>
-                  <li><a href="https://github.com/aaudric/projet-api" class="button" target="_blank" rel="noopener">GitHub</a></li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- YOLO -->
-            <article>
-              <a href="yolo.html" class="image">
-                <img src="images/geometry_recognition/yolo.png" alt="Reconnaissance d’objets géométriques" class="project-image" loading="lazy" width="800" height="450" />
-              </a>
-              <div class="content">
-                <h3>Reconnaissance d’objets géométriques — Deep Learning</h3>
-                <p>Projet de fin de licence : détection et classification d’objets géométriques via un modèle YOLOv5 pré-entraîné.</p>
-                <p><span class="badge">Python</span><span class="badge">YOLOv5</span><span class="badge">OpenCV</span><span class="badge">Deep Learning</span></p>
-                <ul class="actions">
-                  <li><a href="yolo.html" class="button">Détails</a></li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </section>
-      </div>
-    </div>
+<section class="hero-refresh">
+  <div>
+    <div class="kicker">Data Scientist - AI & Data Engineer junior</div>
+    <h1>De la donnée brute à une solution exploitable.</h1>
+    <p class="lead">Diplômé du Master MIASHS, spécialisation Data Science, je travaille à l'intersection du Machine Learning, du Data Engineering et de l'IA générative. Mon parcours va de projets académiques en statistiques, NLP et Computer Vision à des pipelines Python, APIs, contrôles de qualité et solutions GenAI orientées production.</p>
+    <ul class="actions"><li><a href="#featured" class="button primary">Voir mes projets</a></li><li><a href="mailto:jonathan.duckes@gmail.com" class="button">Me contacter</a></li></ul>
+    <div class="quick-meta"><span>Luxembourg</span><span>Mobilité Ile-de-France</span><span>Python</span><span>SQL</span><span>Machine Learning</span><span>GenAI</span></div>
   </div>
+  <div class="profile-pic"><img src="images/profile.jpg" alt="Jonathan Duckes" /></div>
+</section>
 
-  <script src="assets/js/main.js"></script>
-  <script>
-    (function(){
-      const els=document.querySelectorAll('.reveal');
-      const io=new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})
-      },{threshold:.12});
-      els.forEach(el=>io.observe(el));
-    })();
-  </script>
-</body>
-</html>
+<section id="featured"><header class="major"><h2>Projets récents et représentatifs</h2></header>
+<p class="section-intro">Les projets ci-dessous reflètent mon niveau actuel et la diversité de mon profil. Chaque étude de cas met l'accent sur le contexte, mon rôle, les actions techniques et les résultats. Les projets plus anciens restent volontairement visibles plus bas afin de montrer mon évolution.</p>
+<div class="posts"><article class="priority"><div class="content"><div class="project-label">Data Engineering - Data Quality</div><h3>Luxembourg Financial Reference Data Quality</h3><p>Pipeline Python et SQL sur des données officielles luxembourgeoises. Normalisation de snapshots, contrôles qualité, SQLite et comparaison historique des entités.</p><p><span class="badge">Python</span><span class="badge">Pandas</span><span class="badge">SQL</span><span class="badge">SQLite</span><span class="badge">pytest</span></p><ul class="actions"><li><a href="luxembourg-data-quality.html" class="button">Détails</a></li><li><a href="https://github.com/jonathanduc/luxembourg-financial-reference-data-quality" class="button" target="_blank" rel="noopener">GitHub</a></li></ul></div></article><article class="priority"><div class="content"><div class="project-label">Machine Learning - AdTech</div><h3>Teads Data Science Summer School - Signal Challenge</h3><p>Modélisation multi-tâches sur environ 7 millions d'impressions publicitaires pour prédire vue, clic et conversion. Environ 0,85 d'AUC et 1re place au leaderboard privé parmi 4 équipes.</p><p><span class="badge">Python</span><span class="badge">XGBoost</span><span class="badge">DeepFM</span><span class="badge">Deep Learning</span></p><ul class="actions"><li><a href="teads.html" class="button">Détails</a></li></ul></div></article><article class="priority"><div class="content"><div class="project-label">NLP - Recherche</div><h3>INM-Explain - Controverses médicales</h3><p>Analyse de plus de 5 millions de tweets avec Transformers, topic modelling et indice de controverse. Interface Streamlit destinée aux chercheurs.</p><p><span class="badge">Python</span><span class="badge">RoBERTa</span><span class="badge">LDA</span><span class="badge">Streamlit</span><span class="badge">Plotly</span></p><ul class="actions"><li><a href="tweets_controversies.html" class="button">Détails</a></li><li><a href="https://github.com/alyasltd/INM-Explain" class="button" target="_blank" rel="noopener">GitHub</a></li></ul></div></article><article class="priority"><div class="content"><div class="project-label">Time Series - Finance</div><h3>Prédiction des rendements de fin de session</h3><p>Projet de séries temporelles financières sur données intraday d'actions américaines avec tests de stationnarité, feature engineering temporel, ETS, ARIMAX et LSTM.</p><p><span class="badge">Python</span><span class="badge">Time Series</span><span class="badge">ARIMAX</span><span class="badge">LSTM</span><span class="badge">Statistics</span></p><ul class="actions"><li><a href="cfm-timeseries.html" class="button">Détails</a></li></ul></div></article><article class="priority"><div class="content"><div class="project-label">Computer Vision</div><h3>Challenge Collemboles</h3><p>Classification multi-classe d'images microscopiques sur données déséquilibrées. Contribution centrée sur Vision Transformer, cartes d'attention et GradCAM.</p><p><span class="badge">PyTorch</span><span class="badge">Vision Transformer</span><span class="badge">GradCAM</span></p><ul class="actions"><li><a href="collembola.html" class="button">Détails</a></li></ul></div></article><article class="priority"><div class="content"><div class="project-label">GenAI - Projet professionnel privé</div><h3>DatIA - GenAI Web Extraction Agent</h3><p>Projet R&D interne chez Algorep. Agent d'extraction web assisté par GPT-4o, BrowserUse, Playwright et sorties structurées Pydantic, du POC vers l'industrialisation.</p><p><span class="badge">GPT-4o</span><span class="badge">BrowserUse</span><span class="badge">Playwright</span><span class="badge">Pydantic</span><span class="badge">Docker</span></p><ul class="actions"><li><a href="datia.html" class="button">Détails</a></li></ul></div></article></div></section>
+
+<section id="experience"><header class="major"><h2>Expérience professionnelle</h2></header>
+<div class="experience-grid">
+<div class="info-card"><div class="project-label">Novembre 2024 - Novembre 2025</div><h3>Data Engineer Apprentice - Algorep</h3><p>Contribution à CompliancR au sein d'une petite équipe technique. Acquisition, structuration et fiabilisation de données, pipelines Python, APIs, bases de données, contrôles de qualité et de cohérence, Docker, Git, CI/CD, AWS, déploiement et maintenance.</p></div>
+<div class="info-card"><div class="project-label">R&D interne</div><h3>DatIA</h3><p>Conception d'un workflow d'extraction web assisté par LLM. Développement d'un POC avec GPT-4o, BrowserUse, Playwright et Pydantic, présentation aux équipes métier, prise en compte des retours puis travail vers l'industrialisation.</p><p class="private-note">Code source et données internes non publics pour des raisons de confidentialité.</p></div>
+</div></section>
+
+<section><header class="major"><h2>Projets précédents</h2></header>
+<p class="section-intro">Je conserve ces réalisations car elles documentent ma progression, depuis mes premiers projets appliqués jusqu'aux systèmes Data et IA plus complets développés ensuite.</p>
+<div class="posts"><article class=""><div class="content"><div class="project-label">Machine Learning - Projet M1</div><h3>Spaceship Titanic - Kaggle</h3><p>Projet de classification supervisée avec exploration, feature engineering, validation croisée et comparaison de modèles sur données tabulaires hétérogènes.</p><p><span class="badge">Python</span><span class="badge">Pandas</span><span class="badge">scikit-learn</span></p><ul class="actions"><li><a href="spaceship-titanic.html" class="button">Détails</a></li><li><a href="https://github.com/jonathanduc/spaceship-titanic" class="button" target="_blank" rel="noopener">GitHub</a></li></ul></div></article><article class=""><div class="content"><div class="project-label">Open Data - Data Visualization</div><h3>Open Data Dashboard - OMS</h3><p>Dashboard interactif basé sur l'API OMS/GHO avec analyses statistiques, régression, PCA, clustering et visualisations géographiques.</p><p><span class="badge">Python</span><span class="badge">Streamlit</span><span class="badge">scikit-learn</span><span class="badge">Plotly</span></p><ul class="actions"><li><a href="opendata.html" class="button">Détails</a></li><li><a href="https://github.com/jonathanduc/OpenData-Project" class="button" target="_blank" rel="noopener">GitHub</a></li></ul></div></article><article class=""><div class="content"><div class="project-label">Data Integration - API</div><h3>Recipes & Nutrition</h3><p>Projet en binôme d'intégration de données combinant Spoonacular et Open Food Facts via un backend Node.js/Express et une interface web légère.</p><p><span class="badge">Node.js</span><span class="badge">Express</span><span class="badge">Swagger</span><span class="badge">REST API</span></p><ul class="actions"><li><a href="api.html" class="button">Détails</a></li><li><a href="https://github.com/aaudric/projet-api" class="button" target="_blank" rel="noopener">GitHub</a></li></ul></div></article><article class=""><div class="content"><div class="project-label">Computer Vision - Projet de Licence</div><h3>Reconnaissance d'objets géométriques</h3><p>Premier projet de Computer Vision avec annotation d'images, YOLOv5 pré-entraîné, augmentation de données et évaluation de la détection.</p><p><span class="badge">Python</span><span class="badge">YOLOv5</span><span class="badge">OpenCV</span></p><ul class="actions"><li><a href="yolo.html" class="button">Détails</a></li></ul></div></article></div></section>
+
+<section id="research"><header class="major"><h2>Recherche et conférence</h2></header>
+<div class="info-card"><div class="project-label">PFIA 2024 - La Rochelle</div><h3>INM-Explain - Expliquer les controverses médicales</h3><p>Duckes, J., Girondin, A., et al. (2024). <em>INM-Explain - Expliquer les controverses médicales - Application au cas des interventions non médicamenteuses.</em> Journée Santé et IA @ PFIA 2024.</p><ul class="actions"><li><a class="button" href="https://hal-lirmm.ccsd.cnrs.fr/lirmm-04825964" target="_blank" rel="noopener">HAL</a></li></ul></div></section>
+
+<section id="skills"><header class="major"><h2>Compétences</h2></header>
+<div class="skill-grid">
+<div class="info-card"><h3>Data Science et IA</h3><p>Python, SQL, Pandas, NumPy, scikit-learn, XGBoost, PyTorch, TensorFlow, PySpark, statistiques, Machine Learning, Deep Learning, NLP, séries temporelles, Computer Vision, GenAI et LLM.</p></div>
+<div class="info-card"><h3>Data Engineering et delivery</h3><p>ETL/ELT, APIs REST, Docker, Git, CI/CD, AWS, SQLite, qualité des données, Streamlit, Tableau et Power BI.</p></div>
+</div></section>
+
+<section id="education"><header class="major"><h2>Formation</h2></header>
+<div class="education-grid">
+<div class="info-card"><div class="project-label">2023 - 2025</div><h3>Master MIASHS - Data Science</h3><p>Université Paul-Valéry Montpellier 3. Statistiques, apprentissage statistique, Deep Learning, données temporelles, NLP, analyse d'images, SQL/NoSQL, calcul parallèle, optimisation et Data Engineering.</p></div>
+<div class="info-card"><div class="project-label">2020 - 2023</div><h3>Licence MIASHS</h3><p>Université Paul-Valéry Montpellier 3. Mathématiques appliquées, probabilités, estimation et tests, algèbre linéaire, optimisation, modélisation statistique, programmation, bases de données et économie.</p></div>
+</div></section>
+
+<section id="contact"><header class="major"><h2>Contact</h2></header><p>Je recherche un poste junior en Data Science, Data Engineering, AI Engineering ou développement Python orienté Data et IA, au Luxembourg ou en Ile-de-France.</p>
+<ul class="actions"><li><a href="mailto:jonathan.duckes@gmail.com" class="button primary">Email</a></li><li><a href="https://github.com/jonathanduc" class="button" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://www.linkedin.com/in/jonathan-duckes/" class="button" target="_blank" rel="noopener">LinkedIn</a></li></ul></section>
+</div></div></div><script src="assets/js/main.js"></script></body></html>

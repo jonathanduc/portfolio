@@ -1,108 +1,13 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>Visualisations de Tweets Controversés - Jonathan Duckes</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="assets/css/overrides.css" />
-</head>
-<body class="is-preload">
-  <div id="wrapper">
-    <div id="main">
-      <div class="inner">
+<!DOCTYPE HTML><html lang="fr"><head><title>INM-Explain - Analyse de controverses médicales - Jonathan Duckes</title><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/><link rel="stylesheet" href="assets/css/main.css"/><link rel="stylesheet" href="assets/css/refresh-2026.css"/></head>
+<body class="is-preload"><div id="wrapper"><div id="main"><div class="inner">
+<header id="header">
+  <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
+  <ul class="icons">
+    <li><a href="https://github.com/jonathanduc" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+    <li><a href="https://www.linkedin.com/in/jonathan-duckes/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+  </ul>
+</header>
 
-        <!-- Header -->
-        <header id="header">
-          <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
-          <ul class="icons">
-            <li><a href="https://github.com/jonathanduc" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
-            <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
-          </ul>
-        </header>
-
-        <!-- Project Content -->
-        <section>
-          <header class="main">
-            <h1>Visualisations de Tweets Controversés</h1>
-            <p style="margin-top:.5rem;color:#6f7a86">Travail en groupe dans le cadre du TER — Alya Zouzou, Houria Sayah, Maéva Maio, Audric Girondin &amp; Jonathan Duckes</p>
-          </header>
-          <p>Projet réalisé dans le cadre du TER visant à analyser les tweets controversés autour des interventions non médicamenteuses pour le traitement du cancer. Ce projet inclut l'analyse des sentiments, des émotions, la détection de communautés, le Topic Modelling et le calcul d'un indice de controverse.</p>
-
-          <h2>Méthodologie</h2>
-          <ul>
-            <li><strong>Collecte</strong> de tweets (mots-clés santé).</li>
-            <li><strong>Prétraitement</strong> : nettoyage, lemmatisation, normalisation.</li>
-            <li><strong>Descriptif</strong> : stats et distributions.</li>
-            <li><strong>Classification d’opinion</strong> (POUR/CONTRE/NEUTRE) par fine-tuning BERT.</li>
-            <li><strong>Sentiments & émotions</strong> : t-SNE, polarité, visualisations.</li>
-            <li><strong>Topics</strong> : LDA (clusters & thèmes).</li>
-            <li><strong>Communautés</strong> : TF-IDF + KMeans sur hashtags.</li>
-          </ul>
-
-          <h2>Technologies</h2>
-          <ul>
-            <li>Python — Pandas, NumPy, scikit-learn, Gensim, NLTK, spaCy</li>
-            <li>Deep/NLP — Transformers (BERT), TensorFlow/Keras</li>
-            <li>Viz — Matplotlib, Plotly; Graph — NetworkX</li>
-            <li>Env — Jupyter / Colab</li>
-          </ul>
-
-          <ul class="actions">
-            <li><a href="https://github.com/alyasltd/INM-Explain" class="button" target="_blank" rel="noopener">Repo INM-Explain</a></li>
-            <li><a href="http://advanse.lirmm.fr/controverse/index.html" class="button" target="_blank" rel="noopener">Site LIRMM</a></li>
-          </ul>
-        </section>
-
-        <!-- Gallery -->
-        <section class="gallery">
-          <header class="main"><h2>Galerie</h2></header>
-          <div class="box alt">
-            <div class="row gtr-50 gtr-uniform">
-              <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/tweets_controverses/sentiments.png','Analyse des sentiments')">
-                  <img src="images/tweets_controverses/sentiments.png" alt="Analyse des sentiments" loading="lazy" />
-                  <h4>Analyse des sentiments</h4>
-                </a>
-              </div>
-              <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/tweets_controverses/emotions.png','Analyse des émotions')">
-                  <img src="images/tweets_controverses/emotions.png" alt="Analyse des émotions" loading="lazy" />
-                  <h4>Analyse des émotions</h4>
-                </a>
-              </div>
-              <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/tweets_controverses/communities.png','Détection de communautés')">
-                  <img src="images/tweets_controverses/communities.png" alt="Détection de communautés" loading="lazy" />
-                  <h4>Détection de communautés</h4>
-                </a>
-              </div>
-              <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/tweets_controverses/lda.png','Topic Modelling avec LDA')">
-                  <img src="images/tweets_controverses/lda.png" alt="Topic Modelling avec LDA" loading="lazy" />
-                  <h4>Topic Modelling avec LDA</h4>
-                </a>
-              </div>
-              <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/tweets_controverses/controversy_index.png','Indice de controverse')">
-                  <img src="images/tweets_controverses/controversy_index.png" alt="Indice de controverse" loading="lazy" />
-                  <h4>Indice de controverse</h4>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Modal -->
-        <div id="myModal" class="modal">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <img class="modal-content" id="img01">
-          <div class="caption" id="caption"></div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <script src="assets/js/modal.js"></script>
-</body>
-</html>
+<section class="case-hero"><div class="project-label">NLP - Recherche appliquée</div><h1>INM-Explain - Analyse de controverses médicales</h1><p class="case-lead">Projet de recherche appliquée mené avec le LIRMM sur plus de 5 millions de tweets liés aux interventions non médicamenteuses et au cancer.</p><p><span class="badge">Python</span><span class="badge">BERT</span><span class="badge">RoBERTa</span><span class="badge">LDA</span><span class="badge">Streamlit</span><span class="badge">Plotly</span></p><ul class="actions"><li><a href="index.html" class="button">Retour aux projets</a></li><li><a href="https://github.com/alyasltd/INM-Explain" class="button primary" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://hal-lirmm.ccsd.cnrs.fr/lirmm-04825964" class="button" target="_blank" rel="noopener">HAL</a></li></ul></section>
+<section><div class="metric-row"><div class="metric"><strong>>5M tweets</strong>Corpus</div><div class="metric"><strong>NLP santé</strong>Domaine</div><div class="metric"><strong>PFIA 2024</strong>Results & Research Contribution</div></div><div class="case-grid"><div><div class="case-block"><h2>Context & Challenge</h2><p>Dans le cadre d'INM-Explain avec le LIRMM, l'objectif était de caractériser et d'expliquer des controverses médicales à partir d'un corpus massif de discussions sur les réseaux sociaux.</p></div><div class="case-block"><h2>My Role & Actions</h2><p>J'ai contribué au prétraitement d'un corpus de plus de 5 millions de tweets, aux expérimentations avec BERT et RoBERTa, au topic modelling avec LDA et à la construction d'un indice de controverse.</p></div><div class="case-block"><h2>Deliverable</h2><p>Nous avons rendu les résultats accessibles via une application Streamlit pensée pour des chercheurs non spécialistes du NLP, afin qu'ils puissent explorer les thèmes et les dynamiques de controverse.</p></div><div class="case-block"><h2>Results & Research Contribution</h2><p>Le travail a contribué à la communication INM-Explain présentée à la Journée Santé et IA @ PFIA 2024 à La Rochelle.</p></div></div><aside><div class="info-card"><h3>Ce que ce projet démontre</h3><p>Capacité à structurer un problème, choisir une approche adaptée, documenter les choix techniques et communiquer les résultats sans masquer les limites.</p></div></aside></div><div class="project-nav"><a href="index.html">← Retour au portfolio</a></div></section>
+</div></div></div><script src="assets/js/main.js"></script></body></html>

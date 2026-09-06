@@ -1,113 +1,13 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>Open Data Dashboard (OMS) - Audric Girondin & Jonathan Duckes</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="assets/css/overrides.css" />
-</head>
-<body class="is-preload">
-  <div id="wrapper">
-    <div id="main">
-      <div class="inner">
+<!DOCTYPE HTML><html lang="fr"><head><title>Open Data Dashboard - OMS - Jonathan Duckes</title><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/><link rel="stylesheet" href="assets/css/main.css"/><link rel="stylesheet" href="assets/css/refresh-2026.css"/></head>
+<body class="is-preload"><div id="wrapper"><div id="main"><div class="inner">
+<header id="header">
+  <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
+  <ul class="icons">
+    <li><a href="https://github.com/jonathanduc" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+    <li><a href="https://www.linkedin.com/in/jonathan-duckes/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+  </ul>
+</header>
 
-        <!-- Header -->
-        <header id="header">
-          <a href="index.html" class="logo"><strong>Jonathan Duckes</strong> Portfolio</a>
-          <ul class="icons">
-            <li><a href="https://github.com/jonathanduc" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
-            <li><a href="https://www.linkedin.com/in/jonathan-duckes" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
-          </ul>
-        </header>
-
-        <!-- Project Content -->
-        <section>
-          <header class="main">
-            <h1>Open Data Dashboard — OMS (GHO)</h1>
-            <p style="margin-top:.5rem;color:#6f7a86">Projet en binôme — M2 (Open Data & Web des données) — Audric Girondin &amp; Jonathan Duckes</p>
-          </header>
-
-          <p>
-            Application web <strong>Streamlit</strong> d’exploration et d’analyse de données de santé publique issues de l’<strong>API GHO de l’OMS</strong>.
-            L’app récupère dynamiquement les indicateurs, propose des analyses descriptives & visualisations, et intègre un module <strong>Machine Learning</strong> :
-            <em>régression linéaire</em> (prévision temporelle) et <em>clustering KMeans</em> (profilage pays via <strong>PCA</strong>).
-          </p>
-
-          <ul class="actions" style="margin-top:1rem;">
-            <li><a href="https://opendata-project-mwml8pz3ckzih9xtmnb22f.streamlit.app/" class="button primary" target="_blank" rel="noopener">Voir l’application</a></li>
-            <li><a href="https://github.com/jonathanduc/OpenData-Project" class="button" target="_blank" rel="noopener">Voir sur GitHub</a></li>
-          </ul>
-
-          <h2>Objectifs</h2>
-          <ul>
-            <li>Rendre des <strong>indicateurs OMS</strong> accessibles via un <strong>dashboard interactif</strong>.</li>
-            <li>Permettre une <strong>analyse temporelle</strong> (tendances & prévisions) et un <strong>profilage</strong> de pays.</li>
-            <li>Proposer des <strong>visualisations géographiques</strong> pour comparer les régions.</li>
-          </ul>
-
-          <h2>Fonctionnalités principales</h2>
-          <ul>
-            <li><strong>Analyse de données :</strong> sélection d’un indicateur “Health*” → stats descriptives, graphes (barres/lignes), filtres pays/années.</li>
-            <li><strong>ML — Régression :</strong> droite de tendance + prédictions, coefficient/intercept/score <em>R²</em>.</li>
-            <li><strong>ML — Clustering :</strong> normalisation, <strong>PCA</strong> (2D) et <strong>KMeans</strong> (sélection via méthode du coude).</li>
-            <li><strong>Cartographie :</strong> choroplèthe (Plotly), carte GeoPandas/Folium pour l’agrégation pays.</li>
-          </ul>
-
-          <h2>Stack & données</h2>
-          <ul>
-            <li><strong>Python</strong> — Streamlit, Pandas, NumPy, scikit-learn (LinearRegression, KMeans, PCA)</li>
-            <li><strong>Visualisation</strong> — Plotly, GeoPandas, Folium</li>
-            <li><strong>Source</strong> — OMS / GHO API (indicateurs, séries par pays & année)</li>
-          </ul>
-
-          <h2>Défis & améliorations</h2>
-          <ul>
-            <li><strong>Données manquantes</strong> : filtrage & imputation.</li>
-            <li><strong>Latence API</strong> : limitation d’indicateurs / cache.</li>
-            <li><strong>Évolutions</strong> : + d’indicateurs, modèles ML avancés, actualisation planifiée.</li>
-          </ul>
-        </section>
-
-        <!-- Gallery -->
-        <section class="gallery">
-          <header class="main">
-            <h2>Galerie</h2>
-          </header>
-          <div class="box alt">
-            <div class="row gtr-50 gtr-uniform">
-              <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/opendata/regression.png','Régression linéaire & prédictions')">
-                  <img src="images/opendata/regression.png" alt="Régression linéaire & prédictions" loading="lazy" />
-                  <h4>Régression linéaire & prédictions</h4>
-                </a>
-              </div>
-              <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/opendata/pca_clusters.png','PCA + Clustering KMeans (pays)')">
-                  <img src="images/opendata/pca_clusters.png" alt="PCA + Clustering KMeans (pays)" loading="lazy" />
-                  <h4>PCA + Clustering KMeans (pays)</h4>
-                </a>
-              </div>
-              <div class="col-4">
-                <a href="#" class="image fit" onclick="openModal('images/opendata/choropleth.png','Choroplèthe des indicateurs par pays')">
-                  <img src="images/opendata/choropleth.png" alt="Choroplèthe des indicateurs par pays" loading="lazy" />
-                  <h4>Choroplèthe des indicateurs par pays</h4>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Modal -->
-        <div id="myModal" class="modal">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <img class="modal-content" id="img01">
-          <div class="caption" id="caption"></div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <script src="assets/js/modal.js"></script>
-</body>
-</html>
+<section class="case-hero"><div class="project-label">Open Data - Data Visualization</div><h1>Open Data Dashboard - OMS</h1><p class="case-lead">Dashboard interactif construit autour d'indicateurs de santé publique de l'Organisation mondiale de la Santé via l'API GHO.</p><p><span class="badge">Python</span><span class="badge">Streamlit</span><span class="badge">Pandas</span><span class="badge">scikit-learn</span><span class="badge">Plotly</span><span class="badge">GeoPandas</span><span class="badge">Folium</span></p><ul class="actions"><li><a href="index.html" class="button">Retour aux projets</a></li><li><a href="https://github.com/jonathanduc/OpenData-Project" class="button primary" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://opendata-project-mwml8pz3ckzih9xtmnb22f.streamlit.app/" class="button" target="_blank" rel="noopener">Application</a></li></ul></section>
+<section><div class="case-grid"><div><div class="case-block"><h2>Context & Objective</h2><p>Explorer des indicateurs de santé publique dans une interface interactive et combiner visualisation, analyse statistique et Machine Learning exploratoire.</p></div><div class="case-block"><h2>Approach</h2><p>Le projet comprend des visualisations interactives, une régression linéaire pour la prévision, une analyse PCA suivie de KMeans pour profiler les pays et des cartes choroplèthes.</p></div><div class="case-block"><h2>Implementation</h2><p>Les données sont récupérées depuis l'API OMS/GHO, puis préparées dans un pipeline Python avant d'être exposées dans Streamlit.</p></div><div class="case-block"><h2>What I Learned</h2><p>Ce projet m'a permis de travailler la chaîne complète allant de l'Open Data à une application d'analyse destinée à l'exploration.</p></div></div><aside><div class="info-card"><h3>Ce que ce projet démontre</h3><p>Capacité à structurer un problème, choisir une approche adaptée, documenter les choix techniques et communiquer les résultats sans masquer les limites.</p></div></aside></div><div class="project-nav"><a href="index.html">← Retour au portfolio</a></div></section>
+</div></div></div><script src="assets/js/main.js"></script></body></html>
